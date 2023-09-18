@@ -32,10 +32,10 @@ class NetworkDevice(models.Model):
 
 class ProblemReport(models.Model):
     # Define fields for the ProblemReport model
-    title = models.CharField(max_length=255)
+    report_type = models.CharField(max_length=255)
     description = models.TextField()
     location = models.CharField(max_length=255)
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title
+        return self.report_type

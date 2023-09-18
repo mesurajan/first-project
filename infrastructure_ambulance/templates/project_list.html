@@ -6,7 +6,7 @@
     <a href="{% url 'project_submission' %}" class="btn btn-primary my-3">Add Project</a>
     <ul>
         {% for project in projects %}
-            <li>{{ project.project_name }}</li>
+            <li>{{ project_name }}</li>
             <p>{{ project.description }}</p>
             <p>{{ project.location }}</p>
         {% endfor %}

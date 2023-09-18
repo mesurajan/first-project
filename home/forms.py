@@ -1,3 +1,4 @@
+
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .models import ProblemReport
@@ -23,4 +24,4 @@ class LoginForm(AuthenticationForm):
 class ProblemReportForm(forms.ModelForm):
     class Meta:
         model = ProblemReport
-        fields = ["type", "description", "location"]
+        fields = ["report_type", "description", "location"]
