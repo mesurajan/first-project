@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Information</title>
+    <!-- Add the Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-xlg rounded shadow my-5 mx-5">
+        <div class="container mt-5">
+            <h1 class="my-3">Project Information</h1>
+            <form action="{% url 'project_info_submission' %}" method="post">
+                <div class="mb-3">
+                    <label for="projectName" class="form-label">Project Name:</label>
+                    <input type="text" class="form-control" id="projectName" name="projectName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label>
+                    <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location:</label>
+                    <input type="text" class="form-control" id="location" name="location" required>
+                </div>
+                <button type="submit" class="btn btn-primary my-3">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Add the Bootstrap JS and jQuery links if needed -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script> -->
+</body>
+</html>
